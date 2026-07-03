@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Slides Skill Demo</title>
+  <meta name="description" content="A demo presentation made with the Slides Codex skill.">
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #111111;
+      --panel: #1a1d24;
+      --text: #f7f7f2;
+      --muted: #b9bbb7;
+      --line: rgba(255, 255, 255, 0.18);
+      --accent: #f5d547;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    main {
+      width: min(1180px, calc(100vw - 32px));
+      margin: 0 auto;
+      padding: 48px 0;
+    }
+
+    header {
+      display: grid;
+      gap: 14px;
+      margin-bottom: 28px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(38px, 7vw, 88px);
+      line-height: 0.94;
+      letter-spacing: 0;
+    }
+
+    p {
+      margin: 0;
+      max-width: 760px;
+      color: var(--muted);
+      font-size: 20px;
+      line-height: 1.45;
+    }
+
+    .video-shell {
+      overflow: hidden;
+      border: 1px solid var(--line);
+      background: var(--panel);
+    }
+
+    video {
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background: #000;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    a {
+      color: var(--text);
+      text-decoration-color: var(--accent);
+      text-underline-offset: 4px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      min-height: 44px;
+      padding: 0 16px;
+      border: 1px solid var(--line);
+      background: transparent;
+      text-decoration: none;
+    }
+
+    .button.primary {
+      border-color: var(--accent);
+      color: #111111;
+      background: var(--accent);
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Slides skill demo</h1>
+      <p>A presentation made with the Slides skill, showing what the generated output looks like and explaining what the skill does.</p>
+    </header>
+
+    <section class="video-shell" aria-label="Slides skill demo video">
+      <video src="assets/slides-demo.mp4" controls preload="metadata" playsinline></video>
+    </section>
+
+    <nav class="actions" aria-label="Demo links">
+      <a class="button primary" href="assets/slides-demo.mp4">Open video file</a>
+      <a class="button" href="https://github.com/robbertvanempel/slides">View repository</a>
+    </nav>
+  </main>
+</body>
+</html>
